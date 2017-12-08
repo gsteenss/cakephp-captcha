@@ -279,7 +279,7 @@ class CaptchaHandlerController extends AppController
      * @param string  $message
      * @return void
      */
-    private function badRequest($message)
+    protected function badRequest($message)
     {
         while (ob_get_contents()) { ob_end_clean(); }
         header('HTTP/1.1 400 Bad Request');
